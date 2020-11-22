@@ -8,7 +8,7 @@ const HomePage = () => {
     function handleNavigationToQuestionsPage() {
         navigation.navigate('QuestionsPage')
     }
-    
+
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require('../images/LOGO3x.png')} />
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },

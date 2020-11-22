@@ -1,56 +1,49 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-function ProfileResult({ route, navigation }: any) {
+const TipsPage = ({ route, navigation }: any) => {
+
   const
     {
-      profileSummary,
-      profileDescription,
       firstTip,
       secondTip,
       thirdTip,
       fourthTip,
       padding,
-      heightProfilesSummary,
-      heightProfilesDescriptions,
       heightTips
-    } = route.params
+    } = route.params;
 
-  function handleNavigationToProfilesDescription() {
-    navigation.navigate('ProfilesDescription',
-      {
-        profileDescription: profileDescription,
-        firstTip: firstTip,
-        secondTip: secondTip,
-        thirdTip: thirdTip,
-        fourthTip: fourthTip,
-        padding: padding,
-        heightProfilesDescriptions: heightProfilesDescriptions,
-        heightTips: heightTips,
-      })
+  function handleNavigaToHomePage() {
+    navigation.navigate('HomePage')
   }
 
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require('../images/LOGO3x.png')} />
 
-      <Text style={styles.title}>Resultado</Text>
+      <Text style={styles.title}>Vamos para as dicas!</Text>
 
       <View style={{
         width: 350,
-        height: heightProfilesSummary,
+        height: heightTips,
         borderRadius: 20,
         backgroundColor: '#F3F2F2',
         elevation: 3,
         justifyContent: "center",
         alignItems: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         paddingTop: padding
       }}>
-        <Text style={styles.textFrame}>{profileSummary}</Text>
+        <Text style={styles.textFrame}>1) {firstTip}</Text>
+        <Text style={styles.textFrame}>2) {secondTip}</Text>
+        <Text style={styles.textFrame}>3) {thirdTip}</Text>
+        <Text style={styles.textFrame}>{fourthTip}</Text>
+
       </View>
 
-      <TouchableOpacity style={styles.button} onPress={handleNavigationToProfilesDescription}>
-        <Text style={styles.textButton}>Avançar</Text>
+      <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
+        <Text style={styles.textButton}>Voltar a tela inicial</Text>
       </TouchableOpacity>
     </View>
   );
@@ -71,7 +64,7 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 30,
     fontWeight: 'bold',
-    paddingBottom: 40
+    paddingBottom: 10
   },
   textFrame: {
     maxWidth: 300,
@@ -79,8 +72,7 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     color: '#000',
     textAlign: 'justify',
-    marginTop: 15,
-    marginBottom: 10
+    paddingBottom: 10
   },
   button: {
     backgroundColor: '#000',
@@ -100,4 +92,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ProfileResult;
+export default TipsPage;

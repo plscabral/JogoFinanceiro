@@ -3,6 +3,7 @@ import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import Questions from '../arrayQuestions';
+import Profiles from '../arrayProfiles';
 
 const QuestionsPage = () => {
 	const navigation = useNavigation();
@@ -23,43 +24,104 @@ const QuestionsPage = () => {
 	const [optionE, setOptionE] = useState(0);
 
 	function nextQuestions(alternativa: string): void {
-		if(alternativa == "alternativaA"){
+		if (alternativa == "alternativaA") {
 			setOptionA(optionA + 1);
 		}
-		else if(alternativa == "alternativaB"){
+		else if (alternativa == "alternativaB") {
 			setOptionB(optionB + 1);
 		}
-		else if(alternativa == "alternativaC"){
+		else if (alternativa == "alternativaC") {
 			setOptionC(optionC + 1);
 		}
-		else if(alternativa == "alternativaD"){
+		else if (alternativa == "alternativaD") {
 			setOptionD(optionD + 1);
 		}
-		else if(alternativa == "alternativaE"){
+		else if (alternativa == "alternativaE") {
 			setOptionE(optionE + 1);
 		}
-		else{
+		else {
 			console.log("Tipo de alternativa não encontrada!")
 		}
 
-		if(index == 18){
-			if(optionA > optionB && optionA > optionC && optionA > optionD && optionA > optionE ){
-				navigation.navigate('ProfileResult', {resultado: "O CONSTRUTOR"})
+		if (index == 18) {
+			if (optionA > optionB && optionA > optionC && optionA > optionD && optionA > optionE) {
+				navigation.navigate('ProfileResult',
+					{
+						profileSummary: Profiles.Construtor.profileSummary,
+						profileDescription: Profiles.Construtor.profileDescription,
+						firstTip: Profiles.Construtor.firstTip,
+						secondTip: Profiles.Construtor.secondTip,
+						thirdTip: Profiles.Construtor.thirdTip,
+						fourthTip: Profiles.Construtor.fourthTip,
+						padding: Profiles.Construtor.padding,
+						heightProfilesSummary: Profiles.Construtor.heightProfilesSummary,
+						heightProfilesDescriptions: Profiles.Construtor.heightProfilesDescriptions,
+						heightTips: Profiles.Construtor.heightTips
+					})
 			}
-			else if(optionB > optionA && optionB > optionC && optionB > optionD && optionB > optionE ){
-				navigation.navigate('ProfileResult', {resultado: "O DESPREOCUPADO"})
+			else if (optionB > optionA && optionB > optionC && optionB > optionD && optionB > optionE) {
+				navigation.navigate('ProfileResult',
+					{
+						profileSummary: Profiles.Despreocupado.profileSummary,
+						profileDescription: Profiles.Despreocupado.profileDescription,
+						firstTip: Profiles.Despreocupado.firstTip,
+						secondTip: Profiles.Despreocupado.secondTip,
+						thirdTip: Profiles.Despreocupado.thirdTip,
+						fourthTip: Profiles.Despreocupado.fourthTip,
+						padding: Profiles.Despreocupado.padding,
+						heightProfilesSummary: Profiles.Despreocupado.heightProfilesSummary,
+						heightProfilesDescriptions: Profiles.Despreocupado.heightProfilesDescriptions,
+						heightTips: Profiles.Despreocupado.heightTips
+
+					})
 			}
-			else if(optionC > optionA && optionC > optionB && optionC > optionD && optionC > optionE ){
-				navigation.navigate('ProfileResult', {resultado: "O CAMALEÃO"})
+			else if (optionC > optionA && optionC > optionB && optionC > optionD && optionC > optionE) {
+				navigation.navigate('ProfileResult',
+					{
+						profileSummary: Profiles.Camaleao.profileSummary,
+						profileDescription: Profiles.Camaleao.profileDescription,
+						firstTip: Profiles.Camaleao.firstTip,
+						secondTip: Profiles.Camaleao.secondTip,
+						thirdTip: Profiles.Camaleao.thirdTip,
+						fourthTip: Profiles.Camaleao.fourthTip,
+						padding: Profiles.Camaleao.padding,
+						heightProfilesSummary: Profiles.Camaleao.heightProfilesSummary,
+						heightProfilesDescriptions: Profiles.Camaleao.heightProfilesDescriptions,
+						heightTips: Profiles.Camaleao.heightTips
+					})
 			}
-			else if(optionD > optionA && optionD > optionB && optionD > optionC && optionD > optionE ){
-				navigation.navigate('ProfileResult', {resultado: "O SONHADOR"})
+			else if (optionD > optionA && optionD > optionB && optionD > optionC && optionD > optionE) {
+				navigation.navigate('ProfileResult',
+					{
+						profileSummary: Profiles.Sonhador.profileSummary,
+						profileDescription: Profiles.Sonhador.profileDescription,
+						firstTip: Profiles.Sonhador.firstTip,
+						secondTip: Profiles.Sonhador.secondTip,
+						thirdTip: Profiles.Sonhador.thirdTip,
+						fourthTip: Profiles.Sonhador.fourthTip,
+						padding: Profiles.Sonhador.padding,
+						heightProfilesSummary: Profiles.Sonhador.heightProfilesSummary,
+						heightProfilesDescriptions: Profiles.Sonhador.heightProfilesDescriptions,
+						heightTips: Profiles.Sonhador.heightTips
+					})
 			}
-			else{
-				navigation.navigate('ProfileResult', {resultado: "O PLANEJADOR"})
+			else {
+				navigation.navigate('ProfileResult',
+					{
+						profileSummary: Profiles.Planejador.profileSummary,
+						profileDescription: Profiles.Planejador.profileDescription,
+						firstTip: Profiles.Planejador.firstTip,
+						secondTip: Profiles.Planejador.secondTip,
+						thirdTip: Profiles.Planejador.thirdTip,
+						fourthTip: Profiles.Planejador.fourthTip,
+						padding: Profiles.Planejador.padding,
+						heightProfilesSummary: Profiles.Planejador.heightProfilesSummary,
+						heightProfilesDescriptions: Profiles.Planejador.heightProfilesDescriptions,
+						heightTips: Profiles.Planejador.heightTips
+					})
 			}
 		}
-		else{
+		else {
 			setIndex(index + 1);
 		}
 
@@ -127,6 +189,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
+		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
