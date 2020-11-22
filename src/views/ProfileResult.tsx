@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-function ResultPage({route, navigation}: any) {
+function ProfileResult({route, navigation}: any) {
   const { resultado } = route.params
 
   function handleNavigationToQuestionsPage() {
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ResultPage;
+export default ProfileResult;

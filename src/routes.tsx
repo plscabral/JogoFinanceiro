@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import HomePage from './views/HomePage';
 import QuestionsPage from './views/QuestionsPage';
-import ResultPage from './views/ResultPage';
+import ProfileResult from './views/ProfileResult';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -15,7 +15,7 @@ const Routes = () => {
             <Navigator screenOptions={{ headerShown: false }}>
                 <Screen name="HomePage" component={HomePage} />
                 <Screen name="QuestionsPage" component={QuestionsPage}/>
-                <Screen name="ResultPage" component={ResultPage} />
+                <Screen name="ProfileResult" component={ProfileResult} />
             </Navigator>
         </NavigationContainer>
     );

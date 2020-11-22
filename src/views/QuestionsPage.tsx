@@ -44,19 +44,19 @@ const QuestionsPage = () => {
 
 		if(index == 18){
 			if(optionA > optionB && optionA > optionC && optionA > optionD && optionA > optionE ){
-				navigation.navigate('ResultPage', {resultado: "O CONSTRUTOR"})
+				navigation.navigate('ProfileResult', {resultado: "O CONSTRUTOR"})
 			}
 			else if(optionB > optionA && optionB > optionC && optionB > optionD && optionB > optionE ){
-				navigation.navigate('ResultPage', {resultado: "O DESPREOCUPADO"})
+				navigation.navigate('ProfileResult', {resultado: "O DESPREOCUPADO"})
 			}
 			else if(optionC > optionA && optionC > optionB && optionC > optionD && optionC > optionE ){
-				navigation.navigate('ResultPage', {resultado: "O CAMALEÃO"})
+				navigation.navigate('ProfileResult', {resultado: "O CAMALEÃO"})
 			}
 			else if(optionD > optionA && optionD > optionB && optionD > optionC && optionD > optionE ){
-				navigation.navigate('ResultPage', {resultado: "O SONHADOR"})
+				navigation.navigate('ProfileResult', {resultado: "O SONHADOR"})
 			}
 			else{
-				navigation.navigate('ResultPage', {resultado: "O PLANEJADOR"})
+				navigation.navigate('ProfileResult', {resultado: "O PLANEJADOR"})
 			}
 		}
 		else{
