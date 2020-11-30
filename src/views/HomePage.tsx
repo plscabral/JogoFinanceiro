@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -37,20 +36,17 @@ const styles = StyleSheet.create({
         left: 24,
         right: 24,
         bottom: 40,
-
         backgroundColor: '#000',
         borderRadius: 20,
         height: 56,
-
         flexDirection: 'row',
         justifyContent: "center",
         alignItems: 'center',
         elevation: 3
     },
-
     textButton: {
         color: '#fff',
-        fontSize: 18
+        fontSize: 12
     },
 })
 

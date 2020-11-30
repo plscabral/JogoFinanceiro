@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import Questions from '../arrayQuestions';
@@ -52,11 +52,7 @@ const QuestionsPage = () => {
 						firstTip: Profiles.Construtor.firstTip,
 						secondTip: Profiles.Construtor.secondTip,
 						thirdTip: Profiles.Construtor.thirdTip,
-						fourthTip: Profiles.Construtor.fourthTip,
-						padding: Profiles.Construtor.padding,
-						heightProfilesSummary: Profiles.Construtor.heightProfilesSummary,
-						heightProfilesDescriptions: Profiles.Construtor.heightProfilesDescriptions,
-						heightTips: Profiles.Construtor.heightTips
+						fourthTip: Profiles.Construtor.fourthTip
 					})
 			}
 			else if (optionB > optionA && optionB > optionC && optionB > optionD && optionB > optionE) {
@@ -67,12 +63,7 @@ const QuestionsPage = () => {
 						firstTip: Profiles.Despreocupado.firstTip,
 						secondTip: Profiles.Despreocupado.secondTip,
 						thirdTip: Profiles.Despreocupado.thirdTip,
-						fourthTip: Profiles.Despreocupado.fourthTip,
-						padding: Profiles.Despreocupado.padding,
-						heightProfilesSummary: Profiles.Despreocupado.heightProfilesSummary,
-						heightProfilesDescriptions: Profiles.Despreocupado.heightProfilesDescriptions,
-						heightTips: Profiles.Despreocupado.heightTips
-
+						fourthTip: Profiles.Despreocupado.fourthTip
 					})
 			}
 			else if (optionC > optionA && optionC > optionB && optionC > optionD && optionC > optionE) {
@@ -83,11 +74,7 @@ const QuestionsPage = () => {
 						firstTip: Profiles.Camaleao.firstTip,
 						secondTip: Profiles.Camaleao.secondTip,
 						thirdTip: Profiles.Camaleao.thirdTip,
-						fourthTip: Profiles.Camaleao.fourthTip,
-						padding: Profiles.Camaleao.padding,
-						heightProfilesSummary: Profiles.Camaleao.heightProfilesSummary,
-						heightProfilesDescriptions: Profiles.Camaleao.heightProfilesDescriptions,
-						heightTips: Profiles.Camaleao.heightTips
+						fourthTip: Profiles.Camaleao.fourthTip
 					})
 			}
 			else if (optionD > optionA && optionD > optionB && optionD > optionC && optionD > optionE) {
@@ -98,11 +85,7 @@ const QuestionsPage = () => {
 						firstTip: Profiles.Sonhador.firstTip,
 						secondTip: Profiles.Sonhador.secondTip,
 						thirdTip: Profiles.Sonhador.thirdTip,
-						fourthTip: Profiles.Sonhador.fourthTip,
-						padding: Profiles.Sonhador.padding,
-						heightProfilesSummary: Profiles.Sonhador.heightProfilesSummary,
-						heightProfilesDescriptions: Profiles.Sonhador.heightProfilesDescriptions,
-						heightTips: Profiles.Sonhador.heightTips
+						fourthTip: Profiles.Sonhador.fourthTip
 					})
 			}
 			else {
@@ -113,11 +96,7 @@ const QuestionsPage = () => {
 						firstTip: Profiles.Planejador.firstTip,
 						secondTip: Profiles.Planejador.secondTip,
 						thirdTip: Profiles.Planejador.thirdTip,
-						fourthTip: Profiles.Planejador.fourthTip,
-						padding: Profiles.Planejador.padding,
-						heightProfilesSummary: Profiles.Planejador.heightProfilesSummary,
-						heightProfilesDescriptions: Profiles.Planejador.heightProfilesDescriptions,
-						heightTips: Profiles.Planejador.heightTips
+						fourthTip: Profiles.Planejador.fourthTip
 					})
 			}
 		}
@@ -180,7 +159,6 @@ const QuestionsPage = () => {
 			<TouchableOpacity style={styles.button} onPress={handleAlternativaE}>
 				<Text style={styles.textButton}>{alternativeE}</Text>
 			</TouchableOpacity>
-
 		</View>
 	);
 }
@@ -189,45 +167,50 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
-		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
+		width: Dimensions.get('window').width,
+		height: Dimensions.get('window').height,
+		marginTop: 10
 	},
 	image: {
-		width: 150,
-		height: 150
+		width: '40%',
+		height: '20%',
+		marginBottom: 15
 	},
 	frame: {
-		width: 350,
-		height: 170,
+		width: '90%',
+		height: 120,
 		borderRadius: 20,
-		backgroundColor: '#F3F2F2',
-		elevation: 3,
-		justifyContent: "center",
+		backgroundColor: '#f2f2f2',
 		alignItems: 'center',
+		justifyContent: 'center',
+		elevation: 3,
+		marginBottom: 15
 	},
 	textFrame: {
-		maxWidth: 300,
-		fontSize: 16,
-		fontWeight: 'normal',
-		color: '#000'
+		fontSize: 14,
+		color: '#000',
+		fontWeight: 'bold',
+		textAlign: 'center',
+		maxWidth: '90%'
 	},
 	button: {
 		backgroundColor: '#000',
-		height: 60,
-		width: 350,
+		height: 55,
+		width: '90%',
 		borderRadius: 20,
 		justifyContent: "center",
 		alignItems: 'center',
 		elevation: 3,
-		marginTop: 20,
+		marginBottom: 8
 	},
-
 	textButton: {
-		maxWidth: 300,
 		color: '#fff',
-		fontSize: 12
-	},
+		fontSize: 12,
+		textAlign: 'center',
+		maxWidth: '94%'
+	}
 })
 
 export default QuestionsPage;

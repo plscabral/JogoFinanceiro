@@ -1,18 +1,8 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Image, Dimensions, TouchableOpacity, StyleSheet } from 'react-native'
 
 const ProfilesDescription = ({ route, navigation }: any) => {
-  const
-    {
-      profileDescription,
-      firstTip,
-      secondTip,
-      thirdTip,
-      fourthTip,
-      padding,
-      heightProfilesDescriptions,
-      heightTips
-    } = route.params;
+  const { profileDescription, firstTip, secondTip, thirdTip, fourthTip } = route.params;
 
   function handleNavigaToTipsPage() {
     navigation.navigate('TipsPage', {
@@ -20,14 +10,12 @@ const ProfilesDescription = ({ route, navigation }: any) => {
       secondTip: secondTip,
       thirdTip: thirdTip,
       fourthTip: fourthTip,
-      padding: padding,
-      heightTips: heightTips
     })
   }
 
-  function handleNavigaToHomePage() {
-    navigation.navigate('HomePage')
-  }
+  // function handleNavigaToHomePage() {
+  //   navigation.navigate('HomePage')
+  // }
 
   return (
     <View style={styles.container}>
@@ -35,18 +23,7 @@ const ProfilesDescription = ({ route, navigation }: any) => {
 
       <Text style={styles.title}>Você sabia?</Text>
 
-      <View style={{
-        width: 350,
-        height: heightProfilesDescriptions,
-        borderRadius: 20,
-        backgroundColor: '#F3F2F2',
-        elevation: 3,
-        justifyContent: "center",
-        alignItems: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        paddingTop: padding
-      }}>
+      <View style={styles.frame}>
         <Text style={styles.textFrame}>{profileDescription}</Text>
       </View>
 
@@ -54,9 +31,9 @@ const ProfilesDescription = ({ route, navigation }: any) => {
         <Text style={styles.textButton}>Visualizar as dicas sobre o perfil</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
+      {/* <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
         <Text style={styles.textButton}>Voltar a tela inicial</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }
@@ -67,39 +44,52 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    marginTop: 10
   },
   image: {
-    width: 150,
-    height: 150
+    width: '30%',
+    height: '20%',
   },
-  title: {
-    color: '#000',
-    fontSize: 30,
-    fontWeight: 'bold',
-    paddingBottom: 20
+  frame: {
+    width: '90%',
+    height: 350,
+    borderRadius: 20,
+    backgroundColor: '#f2f2f2',
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 3,
+    marginBottom: 15
   },
   textFrame: {
-    maxWidth: 300,
-    fontSize: 16,
-    fontWeight: 'normal',
+    fontSize: 14,
     color: '#000',
-    textAlign: 'justify'
+    fontWeight: 'bold',
+    textAlign: 'justify',
+    maxWidth: '93%'
   },
   button: {
     backgroundColor: '#000',
-    height: 60,
-    width: 350,
+    height: 55,
+    width: '90%',
     borderRadius: 20,
     justifyContent: "center",
     alignItems: 'center',
     elevation: 3,
-    marginTop: 20,
+    marginBottom: 8
   },
-
   textButton: {
-    maxWidth: 300,
     color: '#fff',
-    fontSize: 12
+    fontSize: 12,
+    textAlign: 'center',
+    maxWidth: '94%'
+  },
+  title: {
+    color: '#000',
+    fontSize: 25,
+    fontWeight: 'bold',
+    paddingBottom: 10
   },
 })
 
