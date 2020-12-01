@@ -19,7 +19,7 @@ const ProfilesDescription = ({ route, navigation }: any) => {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/LOGO3x.png')} />
+      <Image style={styles.image} source={require('../images/logo.png')} />
 
       <Text style={styles.title}>Você sabia?</Text>
 
@@ -49,12 +49,12 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   image: {
-    width: '30%',
-    height: '20%',
+    width: 100,
+		height: 130,
   },
   frame: {
     width: '90%',
-    height: 350,
+    height: 330,
     borderRadius: 20,
     backgroundColor: '#f2f2f2',
     alignItems: 'center',

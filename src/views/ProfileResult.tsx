@@ -17,7 +17,7 @@ function ProfileResult({ route, navigation }: any) {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/LOGO3x.png')} />
+      <Image style={styles.image} source={require('../images/logo.png')} />
 
       <Text style={styles.title}>Resultado</Text>
 
@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   image: {
-    width: '40%',
-    height: '20%',
-    marginBottom: 15
+    width: 100,
+		height: 130,
+    marginBottom: 10
   },
   frame: {
     width: '90%',
@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#000',
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
-    paddingBottom: 40
+    paddingBottom: 10
   },
 })
 

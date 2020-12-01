@@ -134,7 +134,7 @@ const QuestionsPage = () => {
 
 	return (
 		<View style={styles.container}>
-			<Image style={styles.image} source={require('../images/LOGO3x.png')} />
+			<Image style={styles.image} source={require('../images/logo.png')} />
 
 			<View style={styles.frame}>
 				<Text style={styles.textFrame}>{questions}</Text>
@@ -174,9 +174,9 @@ const styles = StyleSheet.create({
 		marginTop: 10
 	},
 	image: {
-		width: '40%',
-		height: '20%',
-		marginBottom: 15
+		width: 100,
+		height: 130,
+		marginBottom: 10
 	},
 	frame: {
 		width: '90%',

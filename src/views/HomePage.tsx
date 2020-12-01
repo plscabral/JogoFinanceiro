@@ -11,7 +11,7 @@ const HomePage = () => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../images/LOGO3x.png')} />
+            <Image style={styles.image} source={require('../images/logo.png')} />
 
             <TouchableOpacity style={styles.button} onPress={handleNavigationToQuestionsPage}>
                 <Text style={styles.textButton}>Começar</Text>

@@ -11,7 +11,7 @@ const TipsPage = ({ route, navigation }: any) => {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/LOGO3x.png')} />
+      <Image style={styles.image} source={require('../images/logo.png')} />
 
       <Text style={styles.title}>Vamos para as dicas!</Text>
 
@@ -39,12 +39,13 @@ const styles = StyleSheet.create({
     marginTop: 0
   },
   image: {
-    width: '30%',
-    height: '20%',
+    width: 100,
+    height: 130,
+		marginBottom: 5
   },
   frame: {
     width: '90%',
-    height: 320,
+    height: 300,
     borderRadius: 20,
     backgroundColor: '#f2f2f2',
     alignItems: 'center',
