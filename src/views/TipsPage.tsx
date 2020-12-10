@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     maxWidth: '94%'
   },
   title: {
-    color: '#000',
+    color: '#fff',
     fontSize: 25,
     fontWeight: 'bold',
     paddingBottom: 10

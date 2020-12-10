@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 83,
-		height: 110,
+    height: 110,
+    marginBottom: 10 // talvez tenha que alterar
   },
   frame: {
     width: '90%',
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
     maxWidth: '94%'
   },
   title: {
-    color: '#000',
+    color: '#fff',
     fontSize: 25,
     fontWeight: 'bold',
     paddingBottom: 10
