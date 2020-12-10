@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, Image, ImageBackground, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
 
 function ProfileResult({ route, navigation }: any) {
   const { profileSummary, profileDescription, firstTip, secondTip, thirdTip, fourthTip } = route.params
@@ -16,8 +16,8 @@ function ProfileResult({ route, navigation }: any) {
   }
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/logo.png')} />
+    <ImageBackground source={require('../images/fundo.png')} style={styles.container}>
+      <Image style={styles.image} source={require('../images/logo1x.png')} />
 
       <Text style={styles.title}>Resultado</Text>
 
@@ -28,12 +28,17 @@ function ProfileResult({ route, navigation }: any) {
       <TouchableOpacity style={styles.button} onPress={handleNavigationToProfilesDescription}>
         <Text style={styles.textButton}>Avançar</Text>
       </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  main: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
@@ -43,8 +48,8 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   image: {
-    width: 100,
-		height: 130,
+    width: 83,
+		height: 110,
     marginBottom: 10
   },
   frame: {

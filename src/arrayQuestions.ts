@@ -1,6 +1,6 @@
 const array = [
   {
-    "questionText": "O que você pensa sobre o futuro?",
+    "questionText": "1 - O que você pensa sobre o futuro?",
     "options": {
       "alternativeA": "Vivo a minha vida passo a passo, sempre construindo o dia de amanhã.",
       "alternativeB": "Deixo a vida me levar, não penso muito no futuro.",
@@ -10,7 +10,7 @@ const array = [
     }
   },
   {
-    "questionText": "Como você lida com a renda mensal?",
+    "questionText": "2 - Como você lida com a renda mensal?",
     "options": {
       "alternativeA": "Sou do tipo que guarda sempre um pouco, porque preciso de segurança para o amanhã.",
       "alternativeB": "Sou do tipo que gasta sem pensar muito, porque sempre consigo dar um jeito no final.",
@@ -20,7 +20,7 @@ const array = [
     }
   },
   {
-    "questionText": "Como é a sua relação com o dinheiro?",
+    "questionText": "3 - Como é a sua relação com o dinheiro?",
     "options": {
       "alternativeA": "Dinheiro pra mim é transformação, cada real me ajuda a fazer as coisas acontecerem.",
       "alternativeB": "Dinheiro pra mim é prazer, eu preciso dele pra fazer as coisas que eu gosto.",
@@ -30,7 +30,7 @@ const array = [
     }
   },
   {
-    "questionText": "Você poupa dinheiro?",
+    "questionText": "4 - Você poupa dinheiro?",
     "options": {
       "alternativeA": "Poupo sempre que sobra, mesmo que pequenas quantidades.",
       "alternativeB": "Não me preocupo tanto em poupar, prefiro viver o presente.",
@@ -40,7 +40,7 @@ const array = [
     }
   },
   {
-    "questionText": "Você faz investimentos?",
+    "questionText": "5 - Você faz investimentos?",
     "options": {
       "alternativeA": "Eu faço investimento aos poucos e sempre, inclusive em bens imóveis e outros.",
       "alternativeB": "Investimento não é pra mim, não consigo pensar nisso.",
@@ -50,7 +50,7 @@ const array = [
     }
   },
   {
-    "questionText": "Como você se relaciona com o banco?",
+    "questionText": "6 - Como você se relaciona com o banco?",
     "options": {
       "alternativeA": "O banco pra mim é como se fosse um porquinho, onde eu deixo seguro o meu dinheiro guardado. ",
       "alternativeB": "O banco é brigado comigo, como se fossemos duas pessoas que não se combinam muito.",
@@ -60,7 +60,7 @@ const array = [
     }
   },
   {
-    "questionText": "Como você se relaciona com a família?",
+    "questionText": "7 - Como você se relaciona com a família?",
     "options": {
       "alternativeA": "Na minha família, sou aquele que trabalha duro que se organiza e acaba ajudando os outros.",
       "alternativeB": "Na minha família, sou o mais despreocupado, de vez em quando peço ajuda aos outros.",
@@ -70,7 +70,7 @@ const array = [
     }
   },
   {
-    "questionText": "Você pensa na sua aposentadoria?",
+    "questionText": "8 - Você pensa na sua aposentadoria?",
     "options": {
       "alternativeA": "Meu dinheiro vem do meu esforço, no futuro também vai ser assim porque não me vejo parado, sem trabalhar.",
       "alternativeB": "Não consigo pensar em aposentadoria, só sei que quero estar muito feliz e continuar aproveitando a vida.",
@@ -80,7 +80,7 @@ const array = [
     }
   },
   {
-    "questionText": "Qual destas frases melhor lhe define?",
+    "questionText": "9 - Qual destas frases melhor lhe define?",
     "options": {
       "alternativeA": "Sou muito disciplinado, gosto de ter sempre o controle da situação.",
       "alternativeB": "Não sou muito preocupado deixo a vida acontecer.",
@@ -90,7 +90,7 @@ const array = [
     }
   },
   {
-    "questionText": "Qual destas características você mais se orgulha?",
+    "questionText": "10 - Qual destas características você mais se orgulha?",
     "options": {
       "alternativeA": "Saber economizar cada centavo.",
       "alternativeB": "Viver intensamente um dia de cada vez.",
@@ -100,7 +100,7 @@ const array = [
     }
   },
   {
-    "questionText": "O que não falta no seu dia?",
+    "questionText": "11 - O que não falta no seu dia?",
     "options": {
       "alternativeA": "Reconhecimento e perseverança",
       "alternativeB": "Liberdade e otimismo",
@@ -110,7 +110,7 @@ const array = [
     }
   },
   {
-    "questionText": "O que você faria se ganhasse uma importante quantia em dinheiro?",
+    "questionText": "12 - O que você faria se ganhasse uma importante quantia em dinheiro?",
     "options": {
       "alternativeA": "Aplicaria uma parte no empreendimento que venho construindo e pouparia o restante.",
       "alternativeB": "Viveria os melhores dias da minha vida sem me preocupar com dinheiro.",
@@ -120,7 +120,7 @@ const array = [
     }
   },
   {
-    "questionText": "Em uma linha do tempo como segue sua vida financeira",
+    "questionText": "13 - Em uma linha do tempo como segue sua vida financeira?",
     "options": {
       "alternativeA": "Segue devagar e sempre um degrau por vez.",
       "alternativeB": "Cheia de altos e baixos, mas um dia chego lá.",
@@ -130,7 +130,7 @@ const array = [
     }
   },
   {
-    "questionText": "Com o que você conta para se manter financeiramente?",
+    "questionText": "14 - Com o que você conta para se manter financeiramente?",
     "options": {
       "alternativeA": "Com conquistas e investimentos diários.",
       "alternativeB": "Com as conquistas que surgem ao acaso.",
@@ -140,7 +140,7 @@ const array = [
     }
   },
   {
-    "questionText": "Como você planeja sua vida?",
+    "questionText": "15 - Como você planeja sua vida?",
     "options": {
       "alternativeA": "Procuro ser organizado pra que não falte dinheiro no futuro.",
       "alternativeB": "Viver de planos não combina com meu estilo de vida.",
@@ -150,7 +150,7 @@ const array = [
     }
   },
   {
-    "questionText": "Na busca pelo primeiro emprego, qual destas alternativas você escolheria?",
+    "questionText": "16 - Na busca pelo primeiro emprego, qual destas alternativas você escolheria?",
     "options": {
       "alternativeA": "Optaria pelo emprego que possibilitasse conciliar os estudos e oferecesse maior garantia de estabilidade.",
       "alternativeB": "Escolheria o que pagasse mais, mesmo que fosse um emprego temporário.",
@@ -160,7 +160,7 @@ const array = [
     }
   },
   {
-    "questionText": "O que você faria em uma situação de falência?",
+    "questionText": "17 - O que você faria em uma situação de falência?",
     "options": {
       "alternativeA": "Buscaria nos aprendizados da minha caminhada uma solução e sairia aos poucos da falência.",
       "alternativeB": "Buscaria ajuda dos familiares porque preciso fazer as coisas que gosto.",
@@ -170,7 +170,7 @@ const array = [
     }
   },
   {
-    "questionText": "Como está a sua planilha de orçamento?",
+    "questionText": "18 - Como está a sua planilha de orçamento?",
     "options": {
       "alternativeA": "Com as contas em dia.",
       "alternativeB": "Não tenho planilha de orçamento.",
@@ -180,7 +180,7 @@ const array = [
     }
   },
   {
-    "questionText": "O que você faz quando o ano termina?",
+    "questionText": "19 - O que você faz quando o ano termina?",
     "options": {
       "alternativeA": "Avalia o ano que passou e reorganiza as finanças.",
       "alternativeB": "Aproveito pra comemorar e celebrar a vida, não é hora de pensar em dinheiro.",

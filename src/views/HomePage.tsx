@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, Image, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const HomePage = () => {
@@ -10,26 +10,24 @@ const HomePage = () => {
     }
 
     return (
-        <View style={styles.container}>
-            <Image style={styles.image} source={require('../images/logo.png')} />
-
+        <ImageBackground source={require('../images/fundo.png')} style={styles.container}>
+            <Image style={styles.image} source={require('../images/logo1x.png')} />
             <TouchableOpacity style={styles.button} onPress={handleNavigationToQuestionsPage}>
                 <Text style={styles.textButton}>Começar</Text>
             </TouchableOpacity>
-        </View>
+        </ImageBackground>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
     },
     image: {
-        width: 300,
-        height: 300
+        maxHeight: 280,
+        maxWidth: 210,
     },
     button: {
         position: 'absolute',

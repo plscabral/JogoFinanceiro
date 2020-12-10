@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { Text, View, Image, ImageBackground, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import Questions from '../arrayQuestions';
@@ -23,27 +23,35 @@ const QuestionsPage = () => {
 	const [optionD, setOptionD] = useState(0);
 	const [optionE, setOptionE] = useState(0);
 
-	function nextQuestions(alternativa: string): void {
+	function somaAlternativas(alternativa: string): void {
+
 		if (alternativa == "alternativaA") {
 			setOptionA(optionA + 1);
+			nextQuestions();
 		}
 		else if (alternativa == "alternativaB") {
 			setOptionB(optionB + 1);
+			nextQuestions();
 		}
 		else if (alternativa == "alternativaC") {
 			setOptionC(optionC + 1);
+			nextQuestions();
 		}
 		else if (alternativa == "alternativaD") {
 			setOptionD(optionD + 1);
+			nextQuestions();
 		}
 		else if (alternativa == "alternativaE") {
 			setOptionE(optionE + 1);
+			nextQuestions();
 		}
 		else {
 			console.log("Tipo de alternativa não encontrada!")
 		}
+	}
 
-		if (index == 18) {
+	function nextQuestions(): void {
+		if (index == 19) {
 			if (optionA > optionB && optionA > optionC && optionA > optionD && optionA > optionE) {
 				navigation.navigate('ProfileResult',
 					{
@@ -102,39 +110,39 @@ const QuestionsPage = () => {
 		}
 		else {
 			setIndex(index + 1);
-		}
 
-		setQuestions(Questions[index].questionText)
-		setAlternativeA(Questions[index].options.alternativeA)
-		setAlternativeB(Questions[index].options.alternativeB)
-		setAlternativeC(Questions[index].options.alternativeC)
-		setAlternativeD(Questions[index].options.alternativeD)
-		setAlternativeE(Questions[index].options.alternativeE)
+			setQuestions(Questions[index].questionText)
+			setAlternativeA(Questions[index].options.alternativeA)
+			setAlternativeB(Questions[index].options.alternativeB)
+			setAlternativeC(Questions[index].options.alternativeC)
+			setAlternativeD(Questions[index].options.alternativeD)
+			setAlternativeE(Questions[index].options.alternativeE)
+			}
 	}
 
 	function handleAlternativaA() {
-		nextQuestions("alternativaA");
+		somaAlternativas("alternativaA");
 	}
 
 	function handleAlternativaB() {
-		nextQuestions("alternativaB");
+		somaAlternativas("alternativaB");
 	}
 
 	function handleAlternativaC() {
-		nextQuestions("alternativaC");
+		somaAlternativas("alternativaC");
 	}
 
 	function handleAlternativaD() {
-		nextQuestions("alternativaD");
+		somaAlternativas("alternativaD");
 	}
 
 	function handleAlternativaE() {
-		nextQuestions("alternativaE");
+		somaAlternativas("alternativaE");
 	}
 
 	return (
-		<View style={styles.container}>
-			<Image style={styles.image} source={require('../images/logo.png')} />
+		<ImageBackground source={require('../images/fundo.png')} style={styles.container}>
+			<Image style={styles.image} source={require('../images/logo1x.png')} />
 
 			<View style={styles.frame}>
 				<Text style={styles.textFrame}>{questions}</Text>
@@ -159,12 +167,17 @@ const QuestionsPage = () => {
 			<TouchableOpacity style={styles.button} onPress={handleAlternativaE}>
 				<Text style={styles.textButton}>{alternativeE}</Text>
 			</TouchableOpacity>
-		</View>
+		</ImageBackground>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	main: {
 		flex: 1,
 		backgroundColor: '#fff',
 		alignItems: 'center',
@@ -174,8 +187,8 @@ const styles = StyleSheet.create({
 		marginTop: 10
 	},
 	image: {
-		width: 100,
-		height: 130,
+		width: 83,
+		height: 110,
 		marginBottom: 10
 	},
 	frame: {

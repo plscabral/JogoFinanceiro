@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, Dimensions, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Image, ImageBackground, Dimensions, TouchableOpacity, StyleSheet } from 'react-native'
 
 const ProfilesDescription = ({ route, navigation }: any) => {
   const { profileDescription, firstTip, secondTip, thirdTip, fourthTip } = route.params;
@@ -13,13 +13,9 @@ const ProfilesDescription = ({ route, navigation }: any) => {
     })
   }
 
-  // function handleNavigaToHomePage() {
-  //   navigation.navigate('HomePage')
-  // }
-
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/logo.png')} />
+    <ImageBackground source={require('../images/fundo.png')} style={styles.container}>
+      <Image style={styles.image} source={require('../images/logo1x.png')} />
 
       <Text style={styles.title}>Você sabia?</Text>
 
@@ -30,16 +26,17 @@ const ProfilesDescription = ({ route, navigation }: any) => {
       <TouchableOpacity style={styles.button} onPress={handleNavigaToTipsPage}>
         <Text style={styles.textButton}>Visualizar as dicas sobre o perfil</Text>
       </TouchableOpacity>
-
-      {/* <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
-        <Text style={styles.textButton}>Voltar a tela inicial</Text>
-      </TouchableOpacity> */}
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  main: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
@@ -49,8 +46,8 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   image: {
-    width: 100,
-		height: 130,
+    width: 83,
+		height: 110,
   },
   frame: {
     width: '90%',

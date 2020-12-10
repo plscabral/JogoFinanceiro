@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Dimensions, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, ImageBackground, Dimensions, TouchableOpacity, StyleSheet } from 'react-native';
 
 const TipsPage = ({ route, navigation }: any) => {
 
@@ -10,8 +10,8 @@ const TipsPage = ({ route, navigation }: any) => {
   }
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/logo.png')} />
+    <ImageBackground source={require('../images/fundo.png')} style={styles.container}>
+      <Image style={styles.image} source={require('../images/logo1x.png')} />
 
       <Text style={styles.title}>Vamos para as dicas!</Text>
 
@@ -24,12 +24,17 @@ const TipsPage = ({ route, navigation }: any) => {
       <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
         <Text style={styles.textButton}>Voltar a tela inicial</Text>
       </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  main: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
@@ -39,9 +44,9 @@ const styles = StyleSheet.create({
     marginTop: 0
   },
   image: {
-    width: 100,
-    height: 130,
-		marginBottom: 5
+    width: 83,
+		height: 110,
+    marginBottom: 5
   },
   frame: {
     width: '90%',
