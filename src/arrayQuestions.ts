@@ -83,7 +83,7 @@ const array = [
     "questionText": "9 - Qual destas frases melhor lhe define?",
     "options": {
       "alternativeA": "Sou muito disciplinado, gosto de ter sempre o controle da situação.",
-      "alternativeB": "Não sou muito preocupado deixo a vida acontecer.",
+      "alternativeB": "Não sou muito preocupado, deixo a vida acontecer.",
       "alternativeC": "Sou muito bom em me adaptar ao que o mundo me oferece vivo bem assim.",
       "alternativeD": "Meus sonhos são construídos em cima dos valores que pra mim são importantes. ",
       "alternativeE": "Sou movido por metas, estipulo para mim objetivos a serem cumpridos em um tempo determinado."
@@ -125,7 +125,7 @@ const array = [
       "alternativeA": "Segue devagar e sempre um degrau por vez.",
       "alternativeB": "Cheia de altos e baixos, mas um dia chego lá.",
       "alternativeC": "Com algumas dificuldades, porem mantendo o essencial.",
-      "alternativeD": "Segue com alguns recomeços, sem de olho no futuro.",
+      "alternativeD": "Segue com alguns recomeços, sem está pensando no futuro.",
       "alternativeE": "Em progressão continua muito bem planejada."
     }
   },
@@ -155,7 +155,7 @@ const array = [
       "alternativeA": "Optaria pelo emprego que possibilitasse conciliar os estudos e oferecesse maior garantia de estabilidade.",
       "alternativeB": "Escolheria o que pagasse mais, mesmo que fosse um emprego temporário.",
       "alternativeC": "Colocaria curriculum em todos os lugares, o primeiro que chamasse eu já aceitaria. Afinal nunca se sabe o dia de amanhã.",
-      "alternativeD": "Não me importo se o emprego demore para chegar o importante é que ele complete os meus sonhos.",
+      "alternativeD": "Não me importo se o emprego demora para chegar o importante é que ele realize os meus sonhos.",
       "alternativeE": "Pesquisaria os benefícios de cada empresa e optaria pela que melhor pudesse progredir financeiramente."
     }
   },
