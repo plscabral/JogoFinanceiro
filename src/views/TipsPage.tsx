@@ -9,6 +9,10 @@ const TipsPage = ({ route, navigation }: any) => {
     navigation.navigate('HomePage')
   }
 
+  function handleNavigaToProfileResult() {
+    navigation.navigate('ProfileResult')
+  }
+
   return (
     <ImageBackground source={require('../images/fundo.png')} style={styles.container}>
       <Image style={styles.image} source={require('../images/logo1x.png')} />
@@ -21,7 +25,11 @@ const TipsPage = ({ route, navigation }: any) => {
         <Text style={styles.textFrame}>3) {thirdTip}</Text>
       </View>
 
-      <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
+      <TouchableOpacity style={styles.button} onPress={handleNavigaToProfileResult}>
+        <Text style={styles.textButton}>Voltar ao resultado</Text>
+      </TouchableOpacity>
+
+       <TouchableOpacity style={styles.button} onPress={handleNavigaToHomePage}>
         <Text style={styles.textButton}>Voltar a tela inicial</Text>
       </TouchableOpacity>
     </ImageBackground>
